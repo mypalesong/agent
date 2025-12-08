@@ -1,61 +1,76 @@
 /**
- * Agentic AI 2026 - Paper Style Theme
- * Academic paper inspired design for documentation
+ * Agentic AI 2026 - Modern Paper Style Theme
+ * Clean, readable design with modern typography
  */
+
+/* ============================
+   Font Import - Pretendard + Inter
+   ============================ */
+@import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable.min.css');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap');
 
 /* ============================
    Color Palette - Deep Blue Academic Theme
    ============================ */
 :root {
-  --ifm-color-primary: #1a365d;
-  --ifm-color-primary-dark: #153050;
-  --ifm-color-primary-darker: #122a45;
-  --ifm-color-primary-darkest: #0d1f33;
-  --ifm-color-primary-light: #1f4170;
-  --ifm-color-primary-lighter: #254d83;
-  --ifm-color-primary-lightest: #2d5a99;
+  /* Primary Colors */
+  --ifm-color-primary: #2563eb;
+  --ifm-color-primary-dark: #1d4ed8;
+  --ifm-color-primary-darker: #1e40af;
+  --ifm-color-primary-darkest: #1e3a8a;
+  --ifm-color-primary-light: #3b82f6;
+  --ifm-color-primary-lighter: #60a5fa;
+  --ifm-color-primary-lightest: #93c5fd;
 
-  /* Paper-like background */
-  --ifm-background-color: #fafafa;
+  /* Background */
+  --ifm-background-color: #f8fafc;
   --ifm-background-surface-color: #ffffff;
 
-  /* Typography */
-  --ifm-font-family-base: 'Georgia', 'Times New Roman', serif;
-  --ifm-heading-font-family: 'Helvetica Neue', Arial, sans-serif;
-  --ifm-font-size-base: 17px;
-  --ifm-line-height-base: 1.8;
+  /* Typography - Modern Sans-serif */
+  --ifm-font-family-base: 'Pretendard Variable', 'Pretendard', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --ifm-heading-font-family: 'Inter', 'Pretendard Variable', -apple-system, BlinkMacSystemFont, sans-serif;
+  --ifm-font-size-base: 16px;
+  --ifm-line-height-base: 1.75;
+
+  /* Font Weights */
+  --ifm-font-weight-normal: 400;
+  --ifm-font-weight-semibold: 600;
+  --ifm-font-weight-bold: 700;
 
   /* Code */
-  --ifm-code-font-size: 90%;
-  --docusaurus-highlighted-code-line-bg: rgba(26, 54, 93, 0.1);
+  --ifm-code-font-size: 0.875rem;
+  --ifm-font-family-monospace: 'JetBrains Mono', 'Fira Code', 'Consolas', monospace;
+  --docusaurus-highlighted-code-line-bg: rgba(37, 99, 235, 0.1);
 
   /* Spacing */
-  --ifm-paragraph-margin-bottom: 1.5rem;
-  --ifm-heading-margin-top: 2.5rem;
+  --ifm-paragraph-margin-bottom: 1.25rem;
+  --ifm-heading-margin-top: 2rem;
   --ifm-heading-margin-bottom: 1rem;
 
   /* Custom */
-  --paper-max-width: 850px;
-  --paper-shadow: 0 1px 3px rgba(0,0,0,0.08), 0 4px 12px rgba(0,0,0,0.05);
-  --accent-color: #c53030;
-  --highlight-bg: #fffbeb;
+  --paper-max-width: 880px;
+  --paper-shadow: 0 1px 3px rgba(0,0,0,0.06), 0 4px 16px rgba(0,0,0,0.04);
+  --accent-color: #dc2626;
+  --highlight-bg: #fef3c7;
+  --border-color: #e2e8f0;
 }
 
 [data-theme='dark'] {
-  --ifm-color-primary: #63b3ed;
-  --ifm-color-primary-dark: #4299e1;
-  --ifm-color-primary-darker: #3182ce;
-  --ifm-color-primary-darkest: #2b6cb0;
-  --ifm-color-primary-light: #90cdf4;
-  --ifm-color-primary-lighter: #bee3f8;
-  --ifm-color-primary-lightest: #ebf8ff;
+  --ifm-color-primary: #60a5fa;
+  --ifm-color-primary-dark: #3b82f6;
+  --ifm-color-primary-darker: #2563eb;
+  --ifm-color-primary-darkest: #1d4ed8;
+  --ifm-color-primary-light: #93c5fd;
+  --ifm-color-primary-lighter: #bfdbfe;
+  --ifm-color-primary-lightest: #dbeafe;
 
-  --ifm-background-color: #1a202c;
-  --ifm-background-surface-color: #2d3748;
-  --docusaurus-highlighted-code-line-bg: rgba(99, 179, 237, 0.2);
-  --paper-shadow: 0 1px 3px rgba(0,0,0,0.3), 0 4px 12px rgba(0,0,0,0.2);
-  --accent-color: #fc8181;
-  --highlight-bg: #2d3748;
+  --ifm-background-color: #0f172a;
+  --ifm-background-surface-color: #1e293b;
+  --docusaurus-highlighted-code-line-bg: rgba(96, 165, 250, 0.15);
+  --paper-shadow: 0 1px 3px rgba(0,0,0,0.3), 0 4px 16px rgba(0,0,0,0.2);
+  --accent-color: #f87171;
+  --highlight-bg: rgba(251, 191, 36, 0.1);
+  --border-color: #334155;
 }
 
 /* ============================
@@ -63,12 +78,26 @@
    ============================ */
 html {
   scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  font-feature-settings: 'liga' 1, 'calt' 1;
 }
 
 .markdown {
   font-family: var(--ifm-font-family-base);
+  font-size: 1rem;
+  font-weight: 400;
+  color: #334155;
 }
 
+[data-theme='dark'] .markdown {
+  color: #e2e8f0;
+}
+
+/* Headings */
 .markdown h1,
 .markdown h2,
 .markdown h3,
@@ -76,39 +105,75 @@ html {
 .markdown h5,
 .markdown h6 {
   font-family: var(--ifm-heading-font-family);
-  font-weight: 600;
-  letter-spacing: -0.02em;
+  font-weight: 700;
+  letter-spacing: -0.025em;
+  color: #0f172a;
+}
+
+[data-theme='dark'] .markdown h1,
+[data-theme='dark'] .markdown h2,
+[data-theme='dark'] .markdown h3,
+[data-theme='dark'] .markdown h4,
+[data-theme='dark'] .markdown h5,
+[data-theme='dark'] .markdown h6 {
+  color: #f1f5f9;
 }
 
 .markdown h1 {
-  font-size: 2.5rem;
-  border-bottom: 3px solid var(--ifm-color-primary);
-  padding-bottom: 0.5rem;
-  margin-bottom: 2rem;
+  font-size: 2.25rem;
+  font-weight: 800;
+  line-height: 1.2;
+  border-bottom: 2px solid var(--ifm-color-primary);
+  padding-bottom: 0.75rem;
+  margin-bottom: 1.5rem;
 }
 
 .markdown h2 {
-  font-size: 1.8rem;
-  color: var(--ifm-color-primary);
-  margin-top: 3rem;
-  padding-bottom: 0.3rem;
-  border-bottom: 1px solid var(--ifm-color-primary-lightest);
+  font-size: 1.625rem;
+  font-weight: 700;
+  line-height: 1.3;
+  color: var(--ifm-color-primary-darker);
+  margin-top: 2.5rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid var(--border-color);
+}
+
+[data-theme='dark'] .markdown h2 {
+  color: var(--ifm-color-primary-light);
 }
 
 .markdown h3 {
-  font-size: 1.4rem;
-  color: var(--ifm-color-primary-dark);
+  font-size: 1.25rem;
+  font-weight: 600;
+  line-height: 1.4;
+  margin-top: 2rem;
+}
+
+.markdown h4 {
+  font-size: 1.125rem;
+  font-weight: 600;
+}
+
+/* Paragraphs */
+.markdown p {
+  line-height: 1.8;
+  margin-bottom: 1.25rem;
 }
 
 /* Abstract/Summary style for blockquotes */
 .markdown blockquote {
   background: linear-gradient(135deg, var(--highlight-bg) 0%, transparent 100%);
-  border-left: 4px solid var(--accent-color);
-  padding: 1.5rem 2rem;
-  margin: 2rem 0;
-  font-style: italic;
-  font-size: 1.1rem;
-  border-radius: 0 8px 8px 0;
+  border-left: 4px solid var(--ifm-color-primary);
+  padding: 1.25rem 1.5rem;
+  margin: 1.5rem 0;
+  font-size: 1.05rem;
+  font-style: normal;
+  border-radius: 0 12px 12px 0;
+  color: #475569;
+}
+
+[data-theme='dark'] .markdown blockquote {
+  color: #cbd5e1;
 }
 
 .markdown blockquote p {
@@ -121,98 +186,126 @@ html {
 .theme-doc-markdown {
   max-width: var(--paper-max-width);
   margin: 0 auto;
-  padding: 2rem 3rem;
+  padding: 2.5rem 3rem;
   background: var(--ifm-background-surface-color);
   box-shadow: var(--paper-shadow);
-  border-radius: 4px;
+  border-radius: 12px;
 }
 
 @media (max-width: 996px) {
   .theme-doc-markdown {
-    padding: 1.5rem;
+    padding: 1.5rem 1.25rem;
     margin: 0;
     box-shadow: none;
+    border-radius: 0;
+  }
+
+  .markdown h1 {
+    font-size: 1.75rem;
+  }
+
+  .markdown h2 {
+    font-size: 1.375rem;
   }
 }
 
 /* ============================
-   Code Blocks - Academic Style
+   Code Blocks
    ============================ */
 .markdown pre {
-  border-radius: 8px;
-  border: 1px solid rgba(0,0,0,0.1);
-  box-shadow: inset 0 1px 3px rgba(0,0,0,0.05);
+  border-radius: 12px;
+  border: 1px solid var(--border-color);
+  font-size: 0.875rem;
+  line-height: 1.6;
 }
 
 .markdown code {
-  font-family: 'JetBrains Mono', 'Fira Code', 'Consolas', monospace;
+  font-family: var(--ifm-font-family-monospace);
   font-size: var(--ifm-code-font-size);
+  font-weight: 400;
 }
 
 /* Inline code */
 .markdown :not(pre) > code {
-  background: rgba(26, 54, 93, 0.08);
-  padding: 0.2em 0.4em;
-  border-radius: 4px;
-  color: var(--ifm-color-primary-dark);
+  background: rgba(37, 99, 235, 0.08);
+  padding: 0.2em 0.45em;
+  border-radius: 6px;
+  font-size: 0.9em;
+  color: var(--ifm-color-primary-darker);
+  font-weight: 500;
 }
 
 [data-theme='dark'] .markdown :not(pre) > code {
-  background: rgba(99, 179, 237, 0.15);
+  background: rgba(96, 165, 250, 0.15);
   color: var(--ifm-color-primary-light);
 }
 
 /* ============================
-   Tables - Academic Style
+   Tables
    ============================ */
 .markdown table {
   display: table;
   width: 100%;
-  margin: 2rem 0;
+  margin: 1.5rem 0;
   border-collapse: collapse;
-  font-size: 0.95rem;
-  box-shadow: var(--paper-shadow);
-  border-radius: 8px;
+  font-size: 0.9375rem;
+  border-radius: 12px;
   overflow: hidden;
+  border: 1px solid var(--border-color);
 }
 
 .markdown table thead {
-  background: var(--ifm-color-primary);
+  background: linear-gradient(135deg, var(--ifm-color-primary) 0%, var(--ifm-color-primary-dark) 100%);
   color: white;
 }
 
 .markdown table thead th {
-  padding: 1rem;
+  padding: 0.875rem 1rem;
   font-weight: 600;
   text-align: left;
   font-family: var(--ifm-heading-font-family);
+  font-size: 0.875rem;
+  letter-spacing: 0.01em;
 }
 
 .markdown table tbody tr {
-  border-bottom: 1px solid rgba(0,0,0,0.05);
-  transition: background 0.2s ease;
+  border-bottom: 1px solid var(--border-color);
+  transition: background 0.15s ease;
+}
+
+.markdown table tbody tr:last-child {
+  border-bottom: none;
 }
 
 .markdown table tbody tr:hover {
-  background: var(--highlight-bg);
+  background: rgba(37, 99, 235, 0.04);
+}
+
+[data-theme='dark'] .markdown table tbody tr:hover {
+  background: rgba(96, 165, 250, 0.08);
 }
 
 .markdown table tbody td {
-  padding: 0.875rem 1rem;
+  padding: 0.75rem 1rem;
   vertical-align: top;
+  line-height: 1.6;
 }
 
 .markdown table tbody tr:nth-child(even) {
-  background: rgba(0,0,0,0.02);
+  background: rgba(0,0,0,0.015);
+}
+
+[data-theme='dark'] .markdown table tbody tr:nth-child(even) {
+  background: rgba(255,255,255,0.02);
 }
 
 /* ============================
-   Lists - Enhanced
+   Lists
    ============================ */
 .markdown ul,
 .markdown ol {
-  margin: 1.5rem 0;
-  padding-left: 2rem;
+  margin: 1.25rem 0;
+  padding-left: 1.75rem;
 }
 
 .markdown li {
@@ -224,13 +317,20 @@ html {
   color: var(--ifm-color-primary);
 }
 
+/* Nested lists */
+.markdown li ul,
+.markdown li ol {
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
 /* ============================
    Images & Figures
    ============================ */
 .markdown img {
-  border-radius: 8px;
+  border-radius: 12px;
   box-shadow: var(--paper-shadow);
-  margin: 2rem auto;
+  margin: 1.5rem auto;
   display: block;
   max-width: 100%;
 }
@@ -240,116 +340,162 @@ html {
 .markdown p > em:only-child {
   display: block;
   text-align: center;
-  font-size: 0.9rem;
-  color: #666;
-  margin-top: -1rem;
-  margin-bottom: 2rem;
+  font-size: 0.875rem;
+  color: #64748b;
+  margin-top: -0.75rem;
+  margin-bottom: 1.5rem;
+  font-style: italic;
 }
 
 /* ============================
-   Admonitions - Academic Notes
+   Admonitions
    ============================ */
 .alert {
-  border-radius: 8px;
+  border-radius: 12px;
   border-left-width: 4px;
-  margin: 2rem 0;
+  margin: 1.5rem 0;
+  font-size: 0.9375rem;
 }
 
 .alert--info {
-  background: linear-gradient(135deg, #ebf8ff 0%, #ffffff 100%);
-  border-left-color: #3182ce;
+  background: linear-gradient(135deg, #eff6ff 0%, #ffffff 100%);
+  border-left-color: #3b82f6;
 }
 
 .alert--warning {
-  background: linear-gradient(135deg, #fffaf0 0%, #ffffff 100%);
-  border-left-color: #dd6b20;
+  background: linear-gradient(135deg, #fffbeb 0%, #ffffff 100%);
+  border-left-color: #f59e0b;
 }
 
 .alert--danger {
-  background: linear-gradient(135deg, #fff5f5 0%, #ffffff 100%);
-  border-left-color: #c53030;
+  background: linear-gradient(135deg, #fef2f2 0%, #ffffff 100%);
+  border-left-color: #ef4444;
 }
 
 .alert--success {
-  background: linear-gradient(135deg, #f0fff4 0%, #ffffff 100%);
-  border-left-color: #2f855a;
+  background: linear-gradient(135deg, #f0fdf4 0%, #ffffff 100%);
+  border-left-color: #22c55e;
+}
+
+[data-theme='dark'] .alert--info {
+  background: linear-gradient(135deg, rgba(59, 130, 246, 0.1) 0%, transparent 100%);
+}
+
+[data-theme='dark'] .alert--warning {
+  background: linear-gradient(135deg, rgba(245, 158, 11, 0.1) 0%, transparent 100%);
+}
+
+[data-theme='dark'] .alert--danger {
+  background: linear-gradient(135deg, rgba(239, 68, 68, 0.1) 0%, transparent 100%);
+}
+
+[data-theme='dark'] .alert--success {
+  background: linear-gradient(135deg, rgba(34, 197, 94, 0.1) 0%, transparent 100%);
 }
 
 /* ============================
    TOC - Table of Contents
    ============================ */
 .table-of-contents {
-  font-size: 0.9rem;
-  border-left: 2px solid var(--ifm-color-primary-lightest);
+  font-size: 0.875rem;
+  border-left: 2px solid var(--border-color);
   padding-left: 1rem;
 }
 
 .table-of-contents__link {
-  color: var(--ifm-color-primary-dark);
-  transition: all 0.2s ease;
+  color: #64748b;
+  transition: all 0.15s ease;
+  line-height: 1.6;
 }
 
 .table-of-contents__link:hover,
 .table-of-contents__link--active {
   color: var(--ifm-color-primary);
+  font-weight: 500;
+}
+
+/* ============================
+   Sidebar
+   ============================ */
+.menu__link {
+  font-size: 0.9375rem;
+  font-weight: 450;
+  border-radius: 8px;
+  transition: all 0.15s ease;
+  padding: 0.5rem 0.75rem;
+}
+
+.menu__link:hover {
+  background: rgba(37, 99, 235, 0.06);
+  color: var(--ifm-color-primary);
+}
+
+.menu__link--active {
+  background: var(--ifm-color-primary) !important;
+  color: white !important;
+  font-weight: 500;
+}
+
+.menu__list-item-collapsible .menu__link {
   font-weight: 600;
 }
 
 /* ============================
-   Sidebar - Clean Style
+   Navbar
    ============================ */
-.menu__link {
-  font-size: 0.95rem;
-  border-radius: 6px;
-  transition: all 0.2s ease;
+.navbar {
+  box-shadow: 0 1px 3px rgba(0,0,0,0.05);
 }
 
-.menu__link:hover {
-  background: rgba(26, 54, 93, 0.08);
+.navbar__title {
+  font-family: var(--ifm-heading-font-family);
+  font-weight: 700;
+  font-size: 1.125rem;
 }
 
-.menu__link--active {
-  background: var(--ifm-color-primary);
-  color: white !important;
+.navbar__link {
+  font-weight: 500;
+  font-size: 0.9375rem;
 }
 
 /* ============================
-   Footer - Minimal
+   Footer
    ============================ */
 .footer {
-  background: var(--ifm-color-primary-darkest);
+  background: #0f172a;
 }
 
 .footer__title {
   font-family: var(--ifm-heading-font-family);
+  font-weight: 600;
 }
 
-/* ============================
-   Homepage Features
-   ============================ */
-.features_src-components-HomepageFeatures-styles-module {
-  padding: 4rem 0;
+.footer__link-item {
+  font-size: 0.9375rem;
 }
 
 /* ============================
    Hero Section
    ============================ */
 .hero {
-  background: linear-gradient(135deg, var(--ifm-color-primary-darkest) 0%, var(--ifm-color-primary) 100%);
+  background: linear-gradient(135deg, #1e3a8a 0%, #2563eb 50%, #3b82f6 100%);
   padding: 4rem 0;
 }
 
 .hero__title {
   font-family: var(--ifm-heading-font-family);
-  font-size: 3rem;
-  font-weight: 700;
+  font-size: 2.75rem;
+  font-weight: 800;
+  letter-spacing: -0.03em;
 }
 
 .hero__subtitle {
-  font-size: 1.3rem;
+  font-size: 1.25rem;
+  font-weight: 400;
   opacity: 0.9;
-  max-width: 600px;
+  max-width: 640px;
   margin: 0 auto;
+  line-height: 1.6;
 }
 
 /* ============================
@@ -357,9 +503,58 @@ html {
    ============================ */
 .markdown pre:has(code:not([class*="language-"])) {
   background: var(--ifm-background-surface-color);
-  border: 2px solid var(--ifm-color-primary-lightest);
-  font-size: 0.8rem;
-  line-height: 1.4;
+  border: 1px solid var(--border-color);
+  font-size: 0.75rem;
+  line-height: 1.5;
+}
+
+/* ============================
+   Special Elements
+   ============================ */
+
+/* Divider */
+.markdown hr {
+  border: none;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--border-color), transparent);
+  margin: 2.5rem 0;
+}
+
+/* Strong text */
+.markdown strong {
+  font-weight: 600;
+  color: #1e293b;
+}
+
+[data-theme='dark'] .markdown strong {
+  color: #f1f5f9;
+}
+
+/* Links */
+.markdown a {
+  color: var(--ifm-color-primary);
+  text-decoration: none;
+  font-weight: 500;
+  transition: all 0.15s ease;
+  border-bottom: 1px solid transparent;
+}
+
+.markdown a:hover {
+  color: var(--ifm-color-primary-dark);
+  border-bottom-color: var(--ifm-color-primary);
+}
+
+/* Superscript references */
+.markdown sup {
+  color: var(--accent-color);
+  font-weight: 600;
+}
+
+/* ============================
+   Homepage Features
+   ============================ */
+.features_src-components-HomepageFeatures-styles-module {
+  padding: 4rem 0;
 }
 
 /* ============================
@@ -380,38 +575,30 @@ html {
 }
 
 /* ============================
-   Special Elements
+   Smooth Scrollbar (optional)
    ============================ */
-
-/* Paper section divider */
-.markdown hr {
-  border: none;
-  height: 1px;
-  background: linear-gradient(90deg, transparent, var(--ifm-color-primary-lightest), transparent);
-  margin: 3rem 0;
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
 }
 
-/* Emphasis box */
-.markdown strong {
-  color: var(--ifm-color-primary-dark);
+::-webkit-scrollbar-track {
+  background: transparent;
 }
 
-/* Links */
-.markdown a {
-  color: var(--ifm-color-primary);
-  text-decoration: underline;
-  text-decoration-color: var(--ifm-color-primary-lightest);
-  text-underline-offset: 2px;
-  transition: all 0.2s ease;
+::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 4px;
 }
 
-.markdown a:hover {
-  color: var(--accent-color);
-  text-decoration-color: var(--accent-color);
+::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8;
 }
 
-/* Reference numbers style */
-.markdown sup {
-  color: var(--accent-color);
-  font-weight: 600;
+[data-theme='dark'] ::-webkit-scrollbar-thumb {
+  background: #475569;
+}
+
+[data-theme='dark'] ::-webkit-scrollbar-thumb:hover {
+  background: #64748b;
 }
