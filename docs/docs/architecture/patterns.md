@@ -6,7 +6,13 @@ description: "검증된 에이전트 시스템 설계 패턴과 안티패턴"
 
 # 에이전트 아키텍처 패턴
 
+![Architecture Patterns](https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=900&q=80)
+
+*Figure: Building Blocks of Intelligent Agent Systems*
+
 > "좋은 아키텍처는 변화를 수용하고, 복잡성을 관리하며, 확장 가능한 시스템을 만든다."
+
+---
 
 ## 1. 기본 아키텍처 패턴
 

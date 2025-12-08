@@ -6,7 +6,13 @@ description: "Agentic AI의 개념, 발전 과정, 그리고 2026년 이후의 �
 
 # Agentic AI: 자율적 AI 시스템의 부상
 
+![Agentic AI Hero](https://images.unsplash.com/photo-1485827404703-89b55fcc595e?w=900&q=80)
+
+*Figure: The Rise of Autonomous AI Systems - From Tools to Partners*
+
 > "2026년, 우리는 AI가 단순한 도구에서 자율적인 협력 파트너로 진화하는 역사적 전환점에 서 있다."
+
+---
 
 ## 1. 서론 (Introduction)
 

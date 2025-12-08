@@ -1,30 +1,417 @@
 /**
- * Any CSS included here will be global. The classic template
- * bundles Infima by default. Infima is a CSS framework designed to
- * work well for content-centric websites.
+ * Agentic AI 2026 - Paper Style Theme
+ * Academic paper inspired design for documentation
  */
 
-/* You can override the default Infima variables here. */
+/* ============================
+   Color Palette - Deep Blue Academic Theme
+   ============================ */
 :root {
-  --ifm-color-primary: #2e8555;
-  --ifm-color-primary-dark: #29784c;
-  --ifm-color-primary-darker: #277148;
-  --ifm-color-primary-darkest: #205d3b;
-  --ifm-color-primary-light: #33925d;
-  --ifm-color-primary-lighter: #359962;
-  --ifm-color-primary-lightest: #3cad6e;
-  --ifm-code-font-size: 95%;
-  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
+  --ifm-color-primary: #1a365d;
+  --ifm-color-primary-dark: #153050;
+  --ifm-color-primary-darker: #122a45;
+  --ifm-color-primary-darkest: #0d1f33;
+  --ifm-color-primary-light: #1f4170;
+  --ifm-color-primary-lighter: #254d83;
+  --ifm-color-primary-lightest: #2d5a99;
+
+  /* Paper-like background */
+  --ifm-background-color: #fafafa;
+  --ifm-background-surface-color: #ffffff;
+
+  /* Typography */
+  --ifm-font-family-base: 'Georgia', 'Times New Roman', serif;
+  --ifm-heading-font-family: 'Helvetica Neue', Arial, sans-serif;
+  --ifm-font-size-base: 17px;
+  --ifm-line-height-base: 1.8;
+
+  /* Code */
+  --ifm-code-font-size: 90%;
+  --docusaurus-highlighted-code-line-bg: rgba(26, 54, 93, 0.1);
+
+  /* Spacing */
+  --ifm-paragraph-margin-bottom: 1.5rem;
+  --ifm-heading-margin-top: 2.5rem;
+  --ifm-heading-margin-bottom: 1rem;
+
+  /* Custom */
+  --paper-max-width: 850px;
+  --paper-shadow: 0 1px 3px rgba(0,0,0,0.08), 0 4px 12px rgba(0,0,0,0.05);
+  --accent-color: #c53030;
+  --highlight-bg: #fffbeb;
 }
 
-/* For readability concerns, you should choose a lighter palette in dark mode. */
 [data-theme='dark'] {
-  --ifm-color-primary: #25c2a0;
-  --ifm-color-primary-dark: #21af90;
-  --ifm-color-primary-darker: #1fa588;
-  --ifm-color-primary-darkest: #1a8870;
-  --ifm-color-primary-light: #29d5b0;
-  --ifm-color-primary-lighter: #32d8b4;
-  --ifm-color-primary-lightest: #4fddbf;
-  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
+  --ifm-color-primary: #63b3ed;
+  --ifm-color-primary-dark: #4299e1;
+  --ifm-color-primary-darker: #3182ce;
+  --ifm-color-primary-darkest: #2b6cb0;
+  --ifm-color-primary-light: #90cdf4;
+  --ifm-color-primary-lighter: #bee3f8;
+  --ifm-color-primary-lightest: #ebf8ff;
+
+  --ifm-background-color: #1a202c;
+  --ifm-background-surface-color: #2d3748;
+  --docusaurus-highlighted-code-line-bg: rgba(99, 179, 237, 0.2);
+  --paper-shadow: 0 1px 3px rgba(0,0,0,0.3), 0 4px 12px rgba(0,0,0,0.2);
+  --accent-color: #fc8181;
+  --highlight-bg: #2d3748;
+}
+
+/* ============================
+   Global Typography
+   ============================ */
+html {
+  scroll-behavior: smooth;
+}
+
+.markdown {
+  font-family: var(--ifm-font-family-base);
+}
+
+.markdown h1,
+.markdown h2,
+.markdown h3,
+.markdown h4,
+.markdown h5,
+.markdown h6 {
+  font-family: var(--ifm-heading-font-family);
+  font-weight: 600;
+  letter-spacing: -0.02em;
+}
+
+.markdown h1 {
+  font-size: 2.5rem;
+  border-bottom: 3px solid var(--ifm-color-primary);
+  padding-bottom: 0.5rem;
+  margin-bottom: 2rem;
+}
+
+.markdown h2 {
+  font-size: 1.8rem;
+  color: var(--ifm-color-primary);
+  margin-top: 3rem;
+  padding-bottom: 0.3rem;
+  border-bottom: 1px solid var(--ifm-color-primary-lightest);
+}
+
+.markdown h3 {
+  font-size: 1.4rem;
+  color: var(--ifm-color-primary-dark);
+}
+
+/* Abstract/Summary style for blockquotes */
+.markdown blockquote {
+  background: linear-gradient(135deg, var(--highlight-bg) 0%, transparent 100%);
+  border-left: 4px solid var(--accent-color);
+  padding: 1.5rem 2rem;
+  margin: 2rem 0;
+  font-style: italic;
+  font-size: 1.1rem;
+  border-radius: 0 8px 8px 0;
+}
+
+.markdown blockquote p {
+  margin-bottom: 0;
+}
+
+/* ============================
+   Paper Container Style
+   ============================ */
+.theme-doc-markdown {
+  max-width: var(--paper-max-width);
+  margin: 0 auto;
+  padding: 2rem 3rem;
+  background: var(--ifm-background-surface-color);
+  box-shadow: var(--paper-shadow);
+  border-radius: 4px;
+}
+
+@media (max-width: 996px) {
+  .theme-doc-markdown {
+    padding: 1.5rem;
+    margin: 0;
+    box-shadow: none;
+  }
+}
+
+/* ============================
+   Code Blocks - Academic Style
+   ============================ */
+.markdown pre {
+  border-radius: 8px;
+  border: 1px solid rgba(0,0,0,0.1);
+  box-shadow: inset 0 1px 3px rgba(0,0,0,0.05);
+}
+
+.markdown code {
+  font-family: 'JetBrains Mono', 'Fira Code', 'Consolas', monospace;
+  font-size: var(--ifm-code-font-size);
+}
+
+/* Inline code */
+.markdown :not(pre) > code {
+  background: rgba(26, 54, 93, 0.08);
+  padding: 0.2em 0.4em;
+  border-radius: 4px;
+  color: var(--ifm-color-primary-dark);
+}
+
+[data-theme='dark'] .markdown :not(pre) > code {
+  background: rgba(99, 179, 237, 0.15);
+  color: var(--ifm-color-primary-light);
+}
+
+/* ============================
+   Tables - Academic Style
+   ============================ */
+.markdown table {
+  display: table;
+  width: 100%;
+  margin: 2rem 0;
+  border-collapse: collapse;
+  font-size: 0.95rem;
+  box-shadow: var(--paper-shadow);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.markdown table thead {
+  background: var(--ifm-color-primary);
+  color: white;
+}
+
+.markdown table thead th {
+  padding: 1rem;
+  font-weight: 600;
+  text-align: left;
+  font-family: var(--ifm-heading-font-family);
+}
+
+.markdown table tbody tr {
+  border-bottom: 1px solid rgba(0,0,0,0.05);
+  transition: background 0.2s ease;
+}
+
+.markdown table tbody tr:hover {
+  background: var(--highlight-bg);
+}
+
+.markdown table tbody td {
+  padding: 0.875rem 1rem;
+  vertical-align: top;
+}
+
+.markdown table tbody tr:nth-child(even) {
+  background: rgba(0,0,0,0.02);
+}
+
+/* ============================
+   Lists - Enhanced
+   ============================ */
+.markdown ul,
+.markdown ol {
+  margin: 1.5rem 0;
+  padding-left: 2rem;
+}
+
+.markdown li {
+  margin-bottom: 0.5rem;
+  line-height: 1.7;
+}
+
+.markdown li::marker {
+  color: var(--ifm-color-primary);
+}
+
+/* ============================
+   Images & Figures
+   ============================ */
+.markdown img {
+  border-radius: 8px;
+  box-shadow: var(--paper-shadow);
+  margin: 2rem auto;
+  display: block;
+  max-width: 100%;
+}
+
+/* Figure caption style */
+.markdown img + em,
+.markdown p > em:only-child {
+  display: block;
+  text-align: center;
+  font-size: 0.9rem;
+  color: #666;
+  margin-top: -1rem;
+  margin-bottom: 2rem;
+}
+
+/* ============================
+   Admonitions - Academic Notes
+   ============================ */
+.alert {
+  border-radius: 8px;
+  border-left-width: 4px;
+  margin: 2rem 0;
+}
+
+.alert--info {
+  background: linear-gradient(135deg, #ebf8ff 0%, #ffffff 100%);
+  border-left-color: #3182ce;
+}
+
+.alert--warning {
+  background: linear-gradient(135deg, #fffaf0 0%, #ffffff 100%);
+  border-left-color: #dd6b20;
+}
+
+.alert--danger {
+  background: linear-gradient(135deg, #fff5f5 0%, #ffffff 100%);
+  border-left-color: #c53030;
+}
+
+.alert--success {
+  background: linear-gradient(135deg, #f0fff4 0%, #ffffff 100%);
+  border-left-color: #2f855a;
+}
+
+/* ============================
+   TOC - Table of Contents
+   ============================ */
+.table-of-contents {
+  font-size: 0.9rem;
+  border-left: 2px solid var(--ifm-color-primary-lightest);
+  padding-left: 1rem;
+}
+
+.table-of-contents__link {
+  color: var(--ifm-color-primary-dark);
+  transition: all 0.2s ease;
+}
+
+.table-of-contents__link:hover,
+.table-of-contents__link--active {
+  color: var(--ifm-color-primary);
+  font-weight: 600;
+}
+
+/* ============================
+   Sidebar - Clean Style
+   ============================ */
+.menu__link {
+  font-size: 0.95rem;
+  border-radius: 6px;
+  transition: all 0.2s ease;
+}
+
+.menu__link:hover {
+  background: rgba(26, 54, 93, 0.08);
+}
+
+.menu__link--active {
+  background: var(--ifm-color-primary);
+  color: white !important;
+}
+
+/* ============================
+   Footer - Minimal
+   ============================ */
+.footer {
+  background: var(--ifm-color-primary-darkest);
+}
+
+.footer__title {
+  font-family: var(--ifm-heading-font-family);
+}
+
+/* ============================
+   Homepage Features
+   ============================ */
+.features_src-components-HomepageFeatures-styles-module {
+  padding: 4rem 0;
+}
+
+/* ============================
+   Hero Section
+   ============================ */
+.hero {
+  background: linear-gradient(135deg, var(--ifm-color-primary-darkest) 0%, var(--ifm-color-primary) 100%);
+  padding: 4rem 0;
+}
+
+.hero__title {
+  font-family: var(--ifm-heading-font-family);
+  font-size: 3rem;
+  font-weight: 700;
+}
+
+.hero__subtitle {
+  font-size: 1.3rem;
+  opacity: 0.9;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* ============================
+   ASCII Art / Diagrams
+   ============================ */
+.markdown pre:has(code:not([class*="language-"])) {
+  background: var(--ifm-background-surface-color);
+  border: 2px solid var(--ifm-color-primary-lightest);
+  font-size: 0.8rem;
+  line-height: 1.4;
+}
+
+/* ============================
+   Print Styles
+   ============================ */
+@media print {
+  .theme-doc-markdown {
+    box-shadow: none;
+    max-width: 100%;
+  }
+
+  .navbar,
+  .footer,
+  .pagination-nav,
+  .theme-doc-sidebar-container {
+    display: none !important;
+  }
+}
+
+/* ============================
+   Special Elements
+   ============================ */
+
+/* Paper section divider */
+.markdown hr {
+  border: none;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--ifm-color-primary-lightest), transparent);
+  margin: 3rem 0;
+}
+
+/* Emphasis box */
+.markdown strong {
+  color: var(--ifm-color-primary-dark);
+}
+
+/* Links */
+.markdown a {
+  color: var(--ifm-color-primary);
+  text-decoration: underline;
+  text-decoration-color: var(--ifm-color-primary-lightest);
+  text-underline-offset: 2px;
+  transition: all 0.2s ease;
+}
+
+.markdown a:hover {
+  color: var(--accent-color);
+  text-decoration-color: var(--accent-color);
+}
+
+/* Reference numbers style */
+.markdown sup {
+  color: var(--accent-color);
+  font-weight: 600;
 }

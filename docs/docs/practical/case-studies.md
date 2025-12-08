@@ -6,9 +6,19 @@ description: "다양한 산업에서의 Agentic AI, A2A, AgentOps 실전 적용 
 
 # 실전 사례 연구: 산업별 Agentic AI 적용
 
+![Industry Applications](https://images.unsplash.com/photo-1504868584819-f8e8b4b6d7e3?w=900&q=80)
+
+*Figure: Real-World Applications of Agentic AI Across Industries*
+
 > "이론을 넘어 실전으로 - 실제 비즈니스 문제를 해결하는 Agentic AI 시스템"
 
+---
+
 ## 사례 1: 금융 서비스 - 자동화된 투자 리서치 에이전트
+
+![Finance AI](https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?w=800&q=80)
+
+*Figure 1.1: AI-Powered Investment Research*
 
 ### 1.1 비즈니스 요구사항
 

@@ -6,6 +6,12 @@ description: "Agentic AI 관련 핵심 논문, 프레임워크, 커뮤니티 리
 
 # 참고 문헌 및 연구 자료
 
+![Research Papers](https://images.unsplash.com/photo-1456513080510-7bf3a84b82f8?w=900&q=80)
+
+*Figure: Academic Foundations of Agentic AI Research*
+
+---
+
 ## 핵심 논문 (Foundational Papers)
 
 ### 1. 추론 및 행동 (Reasoning & Acting)

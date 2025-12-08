@@ -6,7 +6,13 @@ description: "에이전트 간 통신을 위한 표준 프로토콜과 상호운
 
 # Agent-to-Agent (A2A) 프로토콜
 
+![Agent Network](https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=900&q=80)
+
+*Figure: Interconnected Agent Networks - The Future of AI Communication*
+
 > "2026년의 AI 생태계는 고립된 에이전트들의 집합이 아니라, 유기적으로 협력하는 에이전트 네트워크가 될 것이다."
+
+---
 
 ## 1. 개요
 

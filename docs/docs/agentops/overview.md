@@ -6,7 +6,13 @@ description: "AI 에이전트의 배포, 모니터링, 관리를 위한 운영 �
 
 # AgentOps: 에이전트 운영의 새로운 패러다임
 
+![AgentOps Dashboard](https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=900&q=80)
+
+*Figure: Modern AI Operations - Monitoring, Observability, and Control*
+
 > "DevOps가 소프트웨어 개발을 혁신했듯이, AgentOps는 AI 에이전트 시대의 운영 표준이 될 것이다."
+
+---
 
 ## 1. AgentOps 개요
 
