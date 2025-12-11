@@ -1,0 +1,8 @@
+{
+  "label": "Architecture",
+  "position": 2,
+  "link": {
+    "type": "generated-index",
+    "description": "AgentOps 플랫폼의 아키텍처 설계 문서입니다."
+  }
+}

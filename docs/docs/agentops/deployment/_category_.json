@@ -1,0 +1,8 @@
+{
+  "label": "Deployment",
+  "position": 4,
+  "link": {
+    "type": "generated-index",
+    "description": "AgentOps 배포 및 운영 가이드입니다."
+  }
+}

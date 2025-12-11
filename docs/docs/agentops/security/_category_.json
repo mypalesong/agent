@@ -1,0 +1,8 @@
+{
+  "label": "Security",
+  "position": 5,
+  "link": {
+    "type": "generated-index",
+    "description": "AgentOps 보안 및 거버넌스 가이드입니다."
+  }
+}
