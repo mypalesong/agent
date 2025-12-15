@@ -1,0 +1,8 @@
+{
+  "label": "LangGraph",
+  "position": 2,
+  "link": {
+    "type": "generated-index",
+    "description": "LangGraph는 상태 기반의 멀티-에이전트 애플리케이션을 구축하기 위한 강력한 프레임워크입니다. 기초부터 고급까지 단계별로 학습해보세요."
+  }
+}

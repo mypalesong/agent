@@ -98,6 +98,27 @@ const config: Config = {
           ],
         },
         {
+          title: 'LangGraph',
+          items: [
+            {
+              label: '기초 가이드',
+              to: '/docs/langgraph/01-beginner',
+            },
+            {
+              label: '중급 가이드',
+              to: '/docs/langgraph/02-intermediate',
+            },
+            {
+              label: '고급 가이드',
+              to: '/docs/langgraph/03-advanced',
+            },
+            {
+              label: 'Real World 적용',
+              to: '/docs/langgraph/04-real-world',
+            },
+          ],
+        },
+        {
           title: 'Research',
           items: [
             {
