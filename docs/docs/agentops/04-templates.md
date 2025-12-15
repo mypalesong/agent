@@ -976,6 +976,6 @@ spec:
 
 ## 다음 단계
 
-- [프로덕션 배포 가이드](./05-deployment.md)
-- [LangGraph 기초](../langgraph/01-beginner.md)
-- [LangGraph 고급](../langgraph/03-advanced.md)
+- 프로덕션 배포 가이드 (준비 중)
+- [LangGraph 기초](../langgraph/beginner.md)
+- [LangGraph 고급](../langgraph/advanced.md)

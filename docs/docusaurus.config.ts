@@ -102,19 +102,19 @@ const config: Config = {
           items: [
             {
               label: '기초 가이드',
-              to: '/docs/langgraph/01-beginner',
+              to: '/docs/langgraph/beginner',
             },
             {
               label: '중급 가이드',
-              to: '/docs/langgraph/02-intermediate',
+              to: '/docs/langgraph/intermediate',
             },
             {
               label: '고급 가이드',
-              to: '/docs/langgraph/03-advanced',
+              to: '/docs/langgraph/advanced',
             },
             {
               label: 'Real World 적용',
-              to: '/docs/langgraph/04-real-world',
+              to: '/docs/langgraph/real-world',
             },
           ],
         },

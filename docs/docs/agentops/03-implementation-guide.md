@@ -1192,5 +1192,5 @@ if __name__ == "__main__":
 ## 다음 단계
 
 - [코드 템플릿](./04-templates.md): 복사해서 바로 사용할 수 있는 템플릿
-- [프로덕션 배포](./05-deployment.md): Kubernetes, Docker 배포 가이드
-- [고급 패턴](./06-advanced-patterns.md): 복잡한 워크플로우 구현
+- 프로덕션 배포 (준비 중): Kubernetes, Docker 배포 가이드
+- 고급 패턴 (준비 중): 복잡한 워크플로우 구현

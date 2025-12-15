@@ -612,7 +612,7 @@ result = graph.invoke(
 
 ## 다음 단계
 
-고급 기능을 마스터했다면, [Real World 적용](./04-real-world.md)에서 다음을 학습하세요:
+고급 기능을 마스터했다면, [Real World 적용](./real-world.md)에서 다음을 학습하세요:
 
 - **프로덕션 배포**: LangGraph Platform, Self-hosted
 - **실제 사례 연구**: Uber, Elastic, Replit 등

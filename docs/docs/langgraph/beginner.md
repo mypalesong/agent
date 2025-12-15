@@ -335,7 +335,7 @@ result = agent.invoke({
 
 ## 다음 단계
 
-기초 개념을 이해했다면, [중급 가이드](./02-intermediate.md)에서 다음 내용을 학습하세요:
+기초 개념을 이해했다면, [중급 가이드](./intermediate.md)에서 다음 내용을 학습하세요:
 
 - **Checkpointing**: 상태 지속성과 세션 관리
 - **Memory**: 단기/장기 메모리 구현

@@ -838,4 +838,4 @@ async def run_with_streaming():
 
 - [실전 구현 가이드](./03-implementation-guide.md): 단계별 프로젝트 구현
 - [코드 템플릿](./04-templates.md): 바로 사용 가능한 템플릿
-- [프로덕션 배포](./05-deployment.md): 배포 및 운영 가이드
+- 프로덕션 배포 (준비 중): 배포 및 운영 가이드
