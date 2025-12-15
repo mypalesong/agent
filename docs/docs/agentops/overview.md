@@ -1,6 +1,6 @@
 ---
 sidebar_position: 1
-title: "AgentOps: 에이전트 운영의 새로운 패러다임"
+title: "AgentOps 개요"
 description: "AI 에이전트의 배포, 모니터링, 관리를 위한 운영 체계"
 ---
 
